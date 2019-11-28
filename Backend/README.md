@@ -20,21 +20,21 @@ Para obtener informacion de la API se debe de realizar una peticion GET hacia cu
 #Espacios
 
 Stage
-###### /insertStage?id_stage=&name=&user=&admin=
+###### /insertStage?name=&user=&admin=
 ###### /deleteStage?id_stage= 
 ###### /searchStage?id_stage=
 ###### /modifyStage?id_stage=&name=
 ###### /showAllStage
 
 Floor
-###### /insertFloor?id_floor=&name=&id_stage=
+###### /insertFloor?&name=&id_stage=
 ###### /deleteFloor?id_floor= 
 ###### /searchFloor?id_floor=
 ###### /modify?id_floor=&name=
 ###### /showAllFloor
 
 Room
-###### /insertRoom?id_room=&name=&id_floor=&id_scenario=
+###### /insertRoom?&name=&id_scenario=
 ###### /deleteRoom?id_room= 
 ###### /searchRoom?id_room=
 ###### /modify?id_room=&name=&id_scenario=
@@ -42,9 +42,9 @@ Room
 
 #Dispositvos
 
-###### /insertProduct?id_product=&name=&description=&os=&id_device=&status=&brand=&model=&x=&y=&id_room=
+###### /insertProduct?name=&description=&os=&id_device=&status=&brand=&model=&x=&y=&id_room=
 
-###### /insertSensor?id_sensor=&type=&firmware=&clasification=&id_device=&status=&brand=&model=&x=&y=&id_room=
+###### /insertSensor?type=&firmware=&clasification=&id_device=&status=&brand=&model=&x=&y=&id_room=
 
 ###### /deleteDevice?id_device=
 ###### /searchDevice?id_device=

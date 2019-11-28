@@ -175,13 +175,13 @@ def InsertStage():
 	mydb = mysql.connector.connect(**config)
 
 	mycursor = mydb.cursor()
-	id_stage = request.args.get('id_stage')
+	#id_stage = request.args.get('id_stage')
 	name = request.args.get('name')
 	user = request.args.get('user')
 	admin = request.args.get('admin')
 
 	try:
-		args = (id_stage, name, admin)
+		args = (name, admin)
 		mycursor.callproc('insertStage', args)
 	except mysql.connector.IntegrityError:
 		return "409"
@@ -274,15 +274,15 @@ def InsertFloor():
 	mydb = mysql.connector.connect(**config)
 
 	mycursor = mydb.cursor()
-	id_floor = request.args.get('id_floor')
+	#d_floor = request.args.get('id_floor')
 	name = request.args.get('name')
 	id_stage = request.args.get('id_stage')
 
 	try:
 		# args = (id_floor, name, id_stage)
 		# mycursor.callproc('insertFloor', args)
-		sql = "INSERT INTO floor (id_floor, name, stage_id_stage) VALUES (%s,%s,%s)"
-		val = (id_floor, name, id_stage)
+		sql = "INSERT INTO floor (name, stage_id_stage) VALUES (%s,%s)"
+		val = (name, id_stage)
 		mycursor.execute(sql, val)
 	except mysql.connector.IntegrityError:
 		return "409"
@@ -377,7 +377,7 @@ def InsertRoom():
 	mydb = mysql.connector.connect(**config)
 
 	mycursor = mydb.cursor()
-	id_room = request.args.get('id_room')
+	#id_room = request.args.get('id_room')
 	name = request.args.get('name')
 	id_floor = request.args.get('id_floor')
 	id_scenario = request.args.get('id_scenario')
@@ -385,8 +385,8 @@ def InsertRoom():
 	try:
 		# args = (id_floor, name, id_stage)
 		# mycursor.callproc('insertFloor', args)
-		sql = "INSERT INTO room (id_room, name, floor_id_floor, scenario_id_scenario) VALUES (%s,%s,%s,%s)"
-		val = (id_room, name, id_floor, id_scenario)
+		sql = "INSERT INTO room (name, floor_id_floor, scenario_id_scenario) VALUES (%s,%s,%s)"
+		val = (name, id_floor, id_scenario)
 		mycursor.execute(sql, val)
 	except mysql.connector.IntegrityError:
 		return "409"
@@ -487,7 +487,7 @@ def InsertProduct():
 	mydb = mysql.connector.connect(**config)
 
 	mycursor = mydb.cursor()
-	id_product = request.args.get('id_product')
+	#id_product = request.args.get('id_product')
 	name = request.args.get('name')
 	description = request.args.get('description')
 	os = request.args.get('os')
@@ -502,15 +502,15 @@ def InsertProduct():
 	# args = (id_floor, name, id_stage)
 	# mycursor.callproc('insertFloor', args)
 	try:
-		sql = "INSERT INTO device (id_device, status, brand, model, min_con, max_con, use_time, time_register, time_unsubcribe, x, y ) VALUES (%s,%s,%s,%s, NULL, NULL, NULL, NULL, NULL, %s, %s)"
-		val = (id_device, status, brand, model, x, y)
+		sql = "INSERT INTO device (status, brand, model, min_con, max_con, use_time, time_register, time_unsubcribe, x, y ) VALUES (%s,%s,%s,%s, NULL, NULL, NULL, NULL, NULL, %s, %s)"
+		val = (status, brand, model, x, y)
 		mycursor.execute(sql, val)
 	except mysql.connector.IntegrityError:
 		return "409"
 
 	try:
-		sql = "INSERT INTO product (id_product, name, description, os, device_id_device) VALUES (%s,%s,%s,%s,%s)"
-		val = (id_product, name, description, os, id_device)
+		sql = "INSERT INTO product (name, description, os, device_id_device) VALUES (%s,%s,%s,%s,%s)"
+		val = (name, description, os, id_device)
 		mycursor.execute(sql, val)
 	except mysql.connector.IntegrityError:
 		return "409"
@@ -525,7 +525,7 @@ def InsertSensor():
 	mydb = mysql.connector.connect(**config)
 
 	mycursor = mydb.cursor()
-	id_sensor = request.args.get('id_sensor')
+	#id_sensor = request.args.get('id_sensor')
 	type_sensor = request.args.get('type')
 	firmware = request.args.get('firmware')
 	clasification = request.args.get('clasification')
@@ -540,15 +540,15 @@ def InsertSensor():
 	# args = (id_floor, name, id_stage)
 	# mycursor.callproc('insertFloor', args)
 	try:
-		sql = "INSERT INTO device (id_device, status, brand, model, min_con, max_con, use_time, time_register, time_unsubcribe, x, y ) VALUES (%s,%s,%s,%s, NULL, NULL, NULL, NULL, NULL, %s, %s)"
-		val = (id_device, status, brand, model, x, y)
+		sql = "INSERT INTO device (status, brand, model, min_con, max_con, use_time, time_register, time_unsubcribe, x, y ) VALUES (%s,%s,%s,%s, NULL, NULL, NULL, NULL, NULL, %s, %s)"
+		val = (status, brand, model, x, y)
 		mycursor.execute(sql, val)
 	except mysql.connector.IntegrityError:
 		return "409"
 
 	try:
-		sql = "INSERT INTO sensor (id_sensor, type, firmware, clasification, device_id_device) VALUES (%s,%s,%s,%s,%s)"
-		val = (id_sensor, type_sensor, firmware, clasification, id_device)
+		sql = "INSERT INTO sensor (type, firmware, clasification, device_id_device) VALUES (%s,%s,%s,%s,%s)"
+		val = (type_sensor, firmware, clasification, id_device)
 		mycursor.execute(sql, val)
 	except mysql.connector.IntegrityError:
 		return "409"
