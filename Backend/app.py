@@ -153,12 +153,14 @@ def ShowAll():
 	
 	row = mycursor.fetchone()
 	print(mycursor.rowcount,"record inserted.")
-	user = {}
+	i = 0
+	user = []
 	while row is not None:
 		username = {}
+		username["username"] = row[0]
 		username["name"] = row[1]
 		username["email"] = row[2]
-		user[row[0]] = username
+		user.append(username)
 		row = mycursor.fetchone()
 
 	return jsonify(user), 200
@@ -258,11 +260,12 @@ def ShowAllStage():
 	
 	row = mycursor.fetchone()
 	print(mycursor.rowcount,"record inserted.")
-	stage = {}
+	stage = []
 	while row is not None:
 		id_stage = {}
 		id_stage["name"] = row[1]
-		stage[row[0]] = id_stage
+		id_stage["id"] = row[0]
+		stage.append(id_stage)
 		row = mycursor.fetchone()
 
 	return jsonify(stage), 200
@@ -360,12 +363,13 @@ def ShowAllFloor():
 	
 	row = mycursor.fetchone()
 	print(mycursor.rowcount,"record inserted.")
-	floor = {}
+	floor = []
 	while row is not None:
 		id_floor = {}
+		id_floor["id"] = row[0]
 		id_floor["name"] = row[1]
 		id_floor["stage"] = row[2]
-		floor[row[0]] = id_floor
+		floor.append(id_floor)
 		row = mycursor.fetchone()
 
 	return jsonify(floor), 200
@@ -466,13 +470,14 @@ def ShowAllRoom():
 	
 	row = mycursor.fetchone()
 	print(mycursor.rowcount,"record inserted.")
-	room = {}
+	room = []
 	while row is not None:
 		id_room = {}
+		id_room["id"] = row[0]
 		id_room["name"] = row[1]
 		id_room["floor"] = row[2]
 		id_room["scenario"] = row[3]
-		room[row[0]] = id_room
+		room.append(id_room)
 		row = mycursor.fetchone()
 
 	return jsonify(room), 200
@@ -658,14 +663,15 @@ def ShowAllDevice():
 	
 	row = mycursor.fetchone()
 	print(mycursor.rowcount,"record inserted.")
-	device = {}
+	device = []
 	while row is not None:
 		id_device = {}
+		id_device["id_device"] = row[0]
 		id_device["brand"] = row[2]
 		id_device["model"] = row[3]
 		id_device["x"] = row[9]
 		id_device["y"] = row[10]
-		device[row[0]] = id_device
+		device.append(id_device)
 		row = mycursor.fetchone()
 
 	return jsonify(device), 200
