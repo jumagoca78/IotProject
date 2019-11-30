@@ -507,14 +507,14 @@ def InsertProduct():
 	# args = (id_floor, name, id_stage)
 	# mycursor.callproc('insertFloor', args)
 	try:
-		sql = "INSERT INTO device (status, brand, model, min_con, max_con, use_time, time_register, time_unsubcribe, x, y ) VALUES (%s,%s,%s,%s, NULL, NULL, NULL, NULL, NULL, %s, %s)"
+		sql = "INSERT INTO device (status, brand, model, min_con, max_con, use_time, time_register, time_unsubcribe, x, y ) VALUES (%s,%s,%s, NULL, NULL, NULL, NULL, NULL, %s, %s)"
 		val = (status, brand, model, x, y)
 		mycursor.execute(sql, val)
 	except mysql.connector.IntegrityError:
 		return "409"
 
 	try:
-		sql = "INSERT INTO product (name, description, os, device_id_device) VALUES (%s,%s,%s,%s,%s)"
+		sql = "INSERT INTO product (name, description, os, device_id_device) VALUES (%s,%s,%s,%s)"
 		val = (name, description, os, id_device)
 		mycursor.execute(sql, val)
 	except mysql.connector.IntegrityError:
@@ -545,14 +545,14 @@ def InsertSensor():
 	# args = (id_floor, name, id_stage)
 	# mycursor.callproc('insertFloor', args)
 	try:
-		sql = "INSERT INTO device (status, brand, model, min_con, max_con, use_time, time_register, time_unsubcribe, x, y ) VALUES (%s,%s,%s,%s, NULL, NULL, NULL, NULL, NULL, %s, %s)"
+		sql = "INSERT INTO device (status, brand, model, min_con, max_con, use_time, time_register, time_unsubcribe, x, y ) VALUES (%s,%s,%s, NULL, NULL, NULL, NULL, NULL, %s, %s)"
 		val = (status, brand, model, x, y)
 		mycursor.execute(sql, val)
 	except mysql.connector.IntegrityError:
 		return "409"
 
 	try:
-		sql = "INSERT INTO sensor (type, firmware, clasification, device_id_device) VALUES (%s,%s,%s,%s,%s)"
+		sql = "INSERT INTO sensor (type, firmware, clasification, device_id_device) VALUES (%s,%s,%s,%s)"
 		val = (type_sensor, firmware, clasification, id_device)
 		mycursor.execute(sql, val)
 	except mysql.connector.IntegrityError:

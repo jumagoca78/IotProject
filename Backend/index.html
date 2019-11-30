@@ -293,7 +293,7 @@
     <script>
         function myFunction10() {
             const Http = new XMLHttpRequest();
-            const url='http://localhost:5000/insertProduct?name=nameProduct&description=desproducto&os=system&status=1&brand=marca&model=modelo&x=1&y=1&id_room=1';
+            const url='http://localhost:5000/insertProduct?name=nameProduct&description=desproducto&os=system&status=1&brand=marca&model=modelo&x=1&y=1&id_room=1&id_device=11';
             Http.open("GET", url);
             Http.send();
             Http.onreadystatechange=(e)=>{
@@ -305,7 +305,7 @@
     <script>
         function myFunction20() {
             const Http = new XMLHttpRequest();
-            const url='http://localhost:5000/insertSensor?type=tipo&firmware=firm&clasification=clasificacion&status=1&brand=marca&model=modelo&x=2&y=2&id_room=1';
+            const url='http://localhost:5000/insertSensor?type=tipo&firmware=firm&clasification=clasificacion&status=1&brand=marca&model=modelo&x=2&y=2&id_room=1&id_device=11';
             Http.open("GET", url);
             Http.send();
             Http.onreadystatechange=(e)=>{

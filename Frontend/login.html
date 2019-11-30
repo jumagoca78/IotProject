@@ -53,16 +53,8 @@
                         <label class="custom-control-label" for="customCheck">Remember Me</label>
                       </div>
                     </div>
-                    <a href="index.html" class="btn btn-primary btn-user btn-block">
-                      Login
-                    </a>
-                    <!-- <hr>
-                    <a href="index.html" class="btn btn-google btn-user btn-block">
-                      <i class="fab fa-google fa-fw"></i> Login with Google
-                    </a>
-                    <a href="index.html" class="btn btn-facebook btn-user btn-block">
-                      <i class="fab fa-facebook-f fa-fw"></i> Login with Facebook
-                    </a> -->
+                    <input type="button" onclick="myFunction1()" class="btn btn-primary btn-user btn-block" name="" value="Login">
+
                   </form>
                   <hr>
                   <div class="text-center">
@@ -92,6 +84,22 @@
 
   <!-- Custom scripts for all pages-->
   <script src="js/sb-admin-2.min.js"></script>
+
+  <script>
+        function myFunction1() {
+            var username = $("#exampleInputEmail").val();
+            var password = $("#exampleInputPassword").val();
+
+            const Http = new XMLHttpRequest();
+            const url='http://localhost:5000/login?username='+username+'&password='+password;
+            Http.open("GET", url);
+            Http.send();
+            Http.onreadystatechange=(e)=>{
+                console.log(Http.responseText)
+                window.location.replace("index.html");
+            }
+        }
+    </script>
 
 </body>
 

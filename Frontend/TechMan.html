@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Documentation</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="style4.css">
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Documentation</h3>
+                <strong>BS</strong>
+            </div>
+
+            <ul class="list-unstyled components">
+                <li class="active">
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-home"></i>
+                        Home
+                    </a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
+                            <a href="InstalManual.html">Installation Manual</a>
+                        </li>
+                        <li>
+                            <a href="UserManual.html">Users Manual</a>
+                        </li>
+                        <li>
+                            <a href="TechMan.html">Technical Manual</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="index4.html">
+                        <i class="fas fa-briefcase"></i>
+                        About Documentation
+                    </a>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-copy"></i>
+                        Pages
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="#">Page 1</a>
+                        </li>
+                        <li>
+                            <a href="#">Page 2</a>
+                        </li>
+                        <li>
+                            <a href="#">Page 3</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-question"></i>
+                        FAQ
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <i class="fas fa-paper-plane"></i>
+                        Return to PMED
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fas fa-align-left"></i>
+                        <span>Toggle Sidebar</span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        
+                    </div>
+                </div>
+            </nav>
+
+            <h2>Technical Manual</h2>
+            <p>The information in this document is provided with the purpose of illustrating the structure of
+                the IOT Project, which includes the process covered to create it, the task model of the project which illustrate the abstract functionality of the system, the activities and process of
+                each activity.</p>
+            <p> The document includes UML diagrams with software pattern applied, in addition it includes the database modelling and a quick view to API system on flask.</p>
+            
+            <div class="line"></div>
+
+            <h2>Taks Model</h2>
+            <p>The task model provide a description of each task in a workflow of the IOT System, those
+                tasks are Enable Access, User Functions, Device Functions, Scenario Functions, Report
+                Functions, which are shown in the image 1.</p>
+            <img src="Img/TechManImg/IoT Task Model .jpg" alt="Task model Diagram" class="center" height="500" width="2000">
+
+            <center>- IMAGEN 1 | TECH MAN -</center>
+
+            <p>The Enable Access workflow shows the steps the system follows to validate any user in
+                the system, it requires the username and password in order to access to the next abstract
+                functions. Image 1.1</p>
+            
+            <img src="Img/TechManImg/Screen1.png" alt="" class="center">
+            <center>IMAGEN 1.1 | Enable Access Workflow</center>
+
+            <p>Each function in the system are classified as User Functions image 1.2, Device Functions
+                image 1.3, Scenario Functions image 1.4, Report Functions image 1.5 from this abstract
+                level there’s exist CRUD functions which are explained below.</p>
+            <img src="Img/TechManImg/Screen2.png" alt="" class="center">
+            <center>IMAGEN 1.2 | User Functions </center>
+            <div class="line"></div>
+            <p></p>
+            <img src="Img/TechManImg/Screen3.png" alt="" class="center">
+            <center>IMAGEN 1.3 | Device Functions</center>
+            <div class="line"></div>
+            <p></p>
+            <img src="Img/TechManImg/Screen4.png" alt="" class="center">
+            <center>IMAGEN 1.4 | Scenario Functions </center>
+            <div class="line"></div>
+            <p></p>
+            <img src="Img/TechManImg/Screen5.png" alt="" class="center">
+            <center>IMAGEN 1.5 | Report Functions</center>
+            <div class="line"></div>
+
+            <p>Create: It requires the information corresponding at each collection of attributes, (User,
+                Device, Scenario, Report), then the system validates the integrity of the information in
+                order to keep or update the information. Image 1.6</p>
+            <img src="Img/TechManImg/Screen6.png" alt="" class="center">
+            <center>IMAGEN 1.6</center>
+            <div class="line"></div>
+
+            <p>Read: The system requires a params of search, to give back the collection of attributes to
+                show.
+                Edit: The system require a param of search, it give back the object information, the
+                process to update the information is by rewriting into the data base, before of this process
+                the system validates the integrity of the information. Image 1.7</p>
+
+            <img src="Img/TechManImg/Screen7.png" alt="" class="center">
+            <center>IMAGEN 1.7 | Create Workflow</center>
+            <div class="line"></div>
+
+            <p>Delete: The system requires a param to search the desire object, in order to follow the
+                Data Base Rules it is impossible to delete information form, instead we change the
+                attributes of the object as deleted. Image 1.8</p>
+            <img src="Img/TechManImg/Screen8.png" alt="" class="center">
+            <center>IMAGEN 1.8</center>
+
+
+            <div class="line"></div>
+
+            <h2>Activity Model</h2>
+            <p>The activity model describes the events of the system, it contains the related behaviour
+                components and the flow between actions, in order to know which function should I do
+                first, the image 2 show the activity model diagram with swim lines to show the actors
+                involved.</p>
+            <p></p>
+            <img src="Img/TechManImg/Activity diagram IoT.png" alt="" class="center" width="800" height="800">
+            <center>IMAGEN 2 SWIM LINES</center>
+            <p></p>
+            <h2>Sequence Diagrams</h2>
+            <p>The sequence diagrams show the interaction in time sequence of each activity, the
+                activities include are those mentioned early in the task model section.
+                The first sequence diagram is from the user login and logout as shown in the image 3.1.</p>
+            <p></p>
+            <img src="Img/TechManImg/Sequence diagram_ Log in - Log out.png" alt="" class="center">
+            <center>LOGIN - LOGOUT</center>
+            <p></p>
+            <div class="line"></div>
+            <p>The next sequence diagrams are for the CRUD functions explained before, the User
+                CRUD functions, the Device CRUD functions, the Stage CRUD functions, and the Report
+                CRUD functions.</p>
+            <p></p>
+            <img src="Img/TechManImg/Sequence diagram_ CRUD User.png" alt="" class="center" width="900" height="1500">
+            <center>SEQUENCE DIAGRAM CRUD USERS</center>
+            <p></p>
+            <img src="Img/TechManImg/Sequence diagram_ CRUD Device .png" alt="" class="center" width="900" height="1500">
+            <center>SEQUENCE DIAGRAM CRUD DEVICE</center>
+            <p></p>
+            
+
+            <div class="line"></div>
+
+             </div>
+    </div>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

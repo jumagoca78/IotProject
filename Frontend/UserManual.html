@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Documentation</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="style4.css">
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Documentation</h3>
+                <strong>BS</strong>
+            </div>
+
+            <ul class="list-unstyled components">
+                <li class="active">
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-home"></i>
+                        Home
+                    </a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
+                            <a href="InstalManual.html">Installation Manual</a>
+                        </li>
+                        <li>
+                            <a href="UserManual.html">Users Manual</a>
+                        </li>
+                        <li>
+                            <a href="TechMan.html">Technical Manual</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="index4.html">
+                        <i class="fas fa-briefcase"></i>
+                        About Documentation
+                    </a>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-copy"></i>
+                        Pages
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="#">Page 1</a>
+                        </li>
+                        <li>
+                            <a href="#">Page 2</a>
+                        </li>
+                        <li>
+                            <a href="#">Page 3</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-question"></i>
+                        FAQ
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <i class="fas fa-paper-plane"></i>
+                        Return to PMED
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fas fa-align-left"></i>
+                        <span>Toggle Sidebar</span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        
+                    </div>
+                </div>
+            </nav>
+
+            <h2>User Manual</h2>
+            <p>Here you will find the mandatory information for each user of the system. When we speak of users of the system and specially about the System administrator, one must not be confused by the Linux SysAdmin and the administrator of the different available accounts, thus we will use the term 'Administrator' for the admin of de accounts within the system itself.</p>
+            
+            <div class="line"></div>
+
+            <h2>Login </h2>
+            <p>As a user, you can enter the system if you have an account. The only way you can have an account is when the administrator registers in the system. Every administrator and user has an encrypted password, so you can not see the password in the database even if you are an administrator. </p>
+            <img src="Img/UserManImg/log.jpeg" alt="Login sample" class="center">
+            <p></p>
+            <b>Administrador</b>
+            <p>As an administrator, you have to type your admin_id in this case, your username and your password. You are going to have more functions and privileges inside the system.</p>
+            <b>User</b>
+            <p>As a user, you have to type your user_id, in this case, your username and your password. You can just add, edit, delete devices and rooms.</p>
+            <p></p>
+
+            <div class="line"></div>
+
+            <h2>Admin/User info</h2>
+            <p>Naturally as part of any system, the user will be able to modify certain things about their profile. Note: Any and all information can be updated except the username. Also, the password will have to be an 8 character password, that includes 1 special character and 2 numbers.</p>
+            <img src="Img/UserManImg/create.jpeg" alt="Requested info" class="center">
+            <div class="line"></div>
+
+            <h2>Spaces/Room administration</h2>
+            <p>When we talk about the spaces, we refere to the whole set of rooms and levels inside your house or building, we will explain the diferrence between the stages, floor, scenerarios and rooms.</p>
+            <b>Stage</b>
+            <p>The stage is the space to keep all your floors and rooms, you can see as a house, office, building or other places. To create you have to set an id and name to identify. You can delete, modify or add more floor/rooms any time. WARNING: If you delete a stage, you are also going to delete all the floor and rooms inside of it.
+            </p>
+
+            <b>Floor</b>
+            <p>The floor is the floor level inside your stage you can create how many do you need. Also, you have to set an id for each floor and a name. You can edit or delete any time. WARNING: If you delete a floor, you are also going to delete all the rooms inside of it.
+            </p>
+
+            <b>Scenarios</b>
+            <p>The scenarios is a set of categories to classify a room. You can not edit, create or delete scenarios. They are already in the database.
+            </p>
+
+            <b>Room</b>
+            <p>The room is the last space you need to create to add devices. It is important to set an id, name, and scenario. You can modify or delete whenever you want.
+            </p>
+            <div class="line"></div>
+
+            <h2>Devices</h2>
+            <p>You can add, edit, modify or delete (WARNING: when you delete a device, just the attribute status is going to change to false or disabled) any device. We have to type of devices: product and sensor. The product is like tv, laptop, microwave, etc. While a sensor is a thing to check the products. Every device has to have a location in a room. </p>
+            <p></p>
+            <img src="Img/UserManImg/3.png" alt="Show all devices" class="center">
+            <p></p>
+            <center>-Show all devices-</center>
+            <p></p>
+            <img src="Img/UserManImg/4.png" alt="Form to add device" class="center">
+            <p></p>
+            <center>-Form to add devices-</center>
+            <p></p>
+            <div class="line"></div>
+
+            <h2>Reports</h2>
+            <p>Every device has a report showing the consumption of energy on a specific date and time.  IMPORTANT: Just the administrator can view the reports. </p>
+            <p></p>
+            <img src="Img/UserManImg/dash.jpeg" alt="Form to generate reports" class="center">
+            <p></p>
+            <center>-Form to generate reports-</center>
+            <p></p>
+         
+
+        </div>
+    </div>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
